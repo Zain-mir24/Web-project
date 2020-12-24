@@ -22,10 +22,11 @@ if(isset($_REQUEST['submit']))
           $description =$_POST['description'];
           $ROM=$_POST['ROM'];
           $RAM=$_POST['RAM'];
+          $price=$_POST['price'];
           $brand= $_POST['samsung'];
           $image=$_FILES['image']['name'];
           $destination="images/".basename($_FILES['image']['name']);  
-          $sql = "INSERT INTO `products`( `Name`, `Description`, `Brand`, `RAM`, `ROM`, `images`) VALUES ('$mobilename','$description','$brand','$RAM','$ROM','$image')";
+          $sql = "INSERT INTO `products`( `Name`, `Description`, `Brand`, `RAM`, `ROM`, `images`,`price`) VALUES ('$mobilename','$description','$brand','$RAM','$ROM','$image','$price')";
           //inserting into database
           if ($conn->query($sql) === TRUE) {
             if(move_uploaded_file($_FILES['image']['tmp_name'],$destination)){
@@ -117,6 +118,9 @@ if(isset($_REQUEST['update']))
                     </div>
                     <div class="col-lg-6">
                         <label for="name">ROM: &nbsp</label><input type="text" name="ROM">
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="name">Price: &nbsp</label><input type="text" name="price">
                     </div>
                     <div class="col-lg-6">
                     <label for="samsung">Samsung</label>    <input type="radio" name="samsung" value="samsung">
