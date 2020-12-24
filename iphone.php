@@ -1,6 +1,6 @@
 <?php
     $conn = new mysqli("localhost","root","","webroject");
-          $sql = "SELECT * FROM products ";
+           $sql = "SELECT * FROM products where Brand='iphone' ";
          $result = mysqli_query($conn,$sql);
  ?>
 <!DOCTYPE html>
@@ -90,167 +90,37 @@
                echo    " <div class='iphone'style='height:150px;'>";
                  echo      " <h1>'".$row['Name']."'</h1>"; 
                            
-                    echo "<img src='images/".$row['images']."' style='height:150px;'a>";                
-                     echo  " <div class='description'>";
-                     echo     " '".$row['Description']."' ";
-                     echo  " </div>";
-                      echo " <p>'".$row['price']."'</p>";
+              echo "<img src='images/".$row['images']."' style='height:150px;'a>";                
+              echo  " <div class='description'>";
+              echo     " '".$row['Description']."' ";
+              echo  " </div>";
+              echo " <p>'".$row['price']."'</p>";
                       
                   
                echo  " <a href='admin.php'><button type='button' class='btn btn-warning'>Buy</button> </a>";
                  echo  "</div>";
               echo"</div>";
               
-              echo " <div class='col-md-3 mobile'>";
-               echo   "  <div class='iphone'>";
-               echo      " <h1>'".$row['Name']."'</h1>"; 
+            //   echo " <div class='col-md-3 mobile'>";
+            //    echo   "  <div class='iphone'>";
+            //    echo      " <h1>'".$row['Name']."'</h1>"; 
 
-                        echo "<img src='images/".$row['images']."' style='height:150px;'a>";  
+            //     echo "<img src='images/".$row['images']."' style='height:150px;'a>";  
                     
-                        echo  " <div class='description'>";
-                        echo     " '".$row['Description']."' ";
-                        echo  " </div>";
-                         echo " <p>'".$row['price']."'</p>";
+            //             echo  " <div class='description'>";
+            //             echo     " '".$row['Description']."' ";
+            //             echo  " </div>";
+            //              echo " <p>'".$row['price']."'</p>";
                          
                      
-                  echo  " <a href='admin.php'><button type='button' class='btn btn-warning'>Buy</button> </a>";
-                    echo  "</div>";
-                 echo"</div>";
+            //       echo  " <a href='admin.php'><button type='button' class='btn btn-warning'>Buy</button> </a>";
+            //         echo  "</div>"
+            //      echo"</div>";
             }?> 
-                <div class="col-md-3 mobile">
-                    <div class="iphone">
-                        <h1>Iphone12</h1>
-
-                        <img src="./images/iphon12.jfif" style="height:150px;" alt="">
-
-                        <div class="description">
-                            New Apple iPhone 12 Mini (128GB, Green)
-                        </div>
-                        <p>Price:$779.00</p>
-                        <button type="button" class="btn btn-warning">Buy</button>
-                    </div>
-                </div>
-                <div class="col-md-3 mobile">
-                    <div class="iphone">
-                        <h1>Iphone12</h1>
-
-                        <img src="./images/iphon12.jfif" style="height:150px;" alt="">
-
-                        <div class="description">
-                            New Apple iPhone 12 Mini (128GB, Green)
-                        </div>
-                        <p>Price:$779.00</p>
-                        <button type="button" class="btn btn-warning">Buy</button>
-                    </div>
-                </div>
-                <div class="col-md-3 mobile">
-                    <div class="iphone">
-                        <h1>Iphone12</h1>
-
-                        <img src="./images/iphon12.jfif" style="height:150px;" alt="">
-
-                        <div class="description">
-                            New Apple iPhone 12 Mini (128GB, Green)
-                        </div>
-                        <p>Price:$779.00</p>
-                        <button type="button" class="btn btn-warning">Buy</button>
-                    </div>
-                </div>
-           
-                <div class="col-md-3 mobile">
-                    <div class="iphone">
-                        <h1>Iphone12</h1>
-
-                        <img src="./images/iphon12.jfif" style="height:150px;" alt="">
-
-                        <div class="description">
-                            New Apple iPhone 12 Mini (128GB, Green)
-                        </div>
-                        <p>Price:$779.00</p>
-                        <button type="button" class="btn btn-warning">Buy</button>
-                    </div>
-                </div>
-                <div class="col-md-3 mobile">
-                    <div class="iphone">
-                        <h1>Iphone12</h1>
-
-                        <img src="./images/iphon12.jfif" style="height:150px;" alt="">
-
-                        <div class="description">
-                            New Apple iPhone 12 Mini (128GB, Green)
-                        </div>
-                        <p>Price:$779.00</p>
-                        <button type="button" class="btn btn-warning">Buy</button>
-                    </div>
-                </div>
-                <div class="col-md-3 mobile">
-                    <div class="iphone">
-                        <h1>Iphone12</h1>
-
-                        <img src="./images/iphon12.jfif" style="height:150px;" alt="">
-
-                        <div class="description">
-                            New Apple iPhone 12 Mini (128GB, Green)
-                        </div>
-                        <p>Price:$779.00</p>
-                        <button type="button" class="btn btn-warning">Buy</button>
-                    </div>
-                </div>
-                <div class="col-md-3 mobile">
-                    <div class="iphone">
-                        <h1>Iphone12</h1>
-
-                        <img src="./images/iphon12.jfif" style="height:150px;" alt="">
-
-                        <div class="description">
-                            New Apple iPhone 12 Mini (128GB, Green)
-                        </div>
-                        <p>Price:$779.00</p>
-                        <button type="button" class="btn btn-warning">Buy</button>
-                    </div>
-                </div>
-                <div class="col-md-3 mobile">
-                    <div class="iphone">
-                        <h1>Iphone12</h1>
-
-                        <img src="./images/iphon12.jfif" style="height:150px;" alt="">
-
-                        <div class="description">
-                            New Apple iPhone 12 Mini (128GB, Green)
-                        </div>
-                        <p>Price:$779.00</p>
-                        <button type="button" class="btn btn-warning">Buy</button>
-                    </div>
-                </div>
-                <div class="col-md-3 mobile">
-                    <div class="iphone">
-                        <h1>Iphone12</h1>
-
-                        <img src="./images/iphon12.jfif" style="height:150px;" alt="">
-
-                        <div class="description">
-                            New Apple iPhone 12 Mini (128GB, Green)
-                        </div>
-                        <p>Price:$779.00</p>
-                        <button type="button" class="btn btn-warning">Buy</button>
-                    </div>
-                </div>
-                <div class="col-md-3 mobile">
-                    <div class="iphone">
-                        <h1>Iphone12</h1>
-
-                        <img src="./images/iphon12.jfif" style="height:150px;" alt="">
-
-                        <div class="description">
-                            New Apple iPhone 12 Mini (128GB, Green)
-                        </div>
-                        <p>Price:$779.00</p>
-                        <button type="button" class="btn btn-warning">Buy</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+                
     </section>
+    <br>
+    <br>
 
     <footer style="margin-top: 3%">
     

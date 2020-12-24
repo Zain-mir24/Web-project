@@ -23,7 +23,7 @@ if(isset($_REQUEST['submit']))
           $ROM=$_POST['ROM'];
           $RAM=$_POST['RAM'];
           $price=$_POST['price'];
-          $brand= $_POST['samsung'];
+          $brand= $_POST['brand'];
           $image=$_FILES['image']['name'];
           $destination="images/".basename($_FILES['image']['name']);  
           $sql = "INSERT INTO `products`( `Name`, `Description`, `Brand`, `RAM`, `ROM`, `images`,`price`) VALUES ('$mobilename','$description','$brand','$RAM','$ROM','$image','$price')";
@@ -123,8 +123,8 @@ if(isset($_REQUEST['update']))
                         <label for="name">Price: &nbsp</label><input type="text" name="price">
                     </div>
                     <div class="col-lg-6">
-                    <label for="samsung">Samsung</label>    <input type="radio" name="samsung" value="samsung">
-                    <label for="samsung">Iphone</label>    <input type="radio" name="samsung" value="iphone">
+                    <label for="samsung">Samsung</label>    <input type="radio" name="brand" value="samsung">
+                    <label for="samsung">Iphone</label>    <input type="radio" name="brand" value="iphone">
                     </div>
                     <div class="col-lg-12">
                         <label for="image">Select Image</label>
