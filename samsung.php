@@ -97,7 +97,7 @@
               echo " <p>'".$row['price']."'</p>";
                       
                   
-               echo  " <a href='cart.php'><button type='button' class='btn btn-warning'>Buy</button> </a>";
+               echo  " <a href='product.php'><button type='button' class='btn btn-warning'>Buy</button> </a>";
                   echo  "</div>";
               echo"</div>";
               

@@ -1,3 +1,9 @@
+<?php
+    $conn = new mysqli("localhost","root","","webroject");
+    $sql = "SELECT * FROM products where Brand='iphone' ";
+    $result = mysqli_query($conn,$sql);
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,30 +70,32 @@
   </header>
     
     <section>
-        <div class="row">
-            <div class="col-lg-6 left-side">
-                <img src="./images/Samsung-Galaxy-A01.jpg" alt="">
-            </div>
-            <div class="col-lg-6 right-side">
-                <h1>Samsung Galaxy A01</h1>
-                <h6>Rs 43,999</h6>
-                <hr>
-                <ul>
-                    <li>64MP AI quad camera</li>
-                    <li>Qualcomm® SnapdragonTM 720G</li>
-                    <li>5020mAh Battery</li>
-                    <li>6.67" DotDisplay</li>
-                    <li>16MP In-Display Front Camera</li>
-                    <li>Height: 165.75mm Width: 76.68mm Thickness: 8.8mm Weight: 209g</li>
-                    <li>Supports 2+1 card slot, nano-SIM + nano-SIM + microSD (512GB expandable)</li>
-                    <li>6GB RAM</li>
-                    <li>64GB ROM</li>
-                </ul>
-                <button class="btn btn-outline-warning"  href="admin.php"  style="display: block; margin-left: 25%;"><i
-                 class="fas fa-shopping-cart"></i>&nbsp Add To
-                    Cart</button>
-            </div>
-        </div>
+    <?php
+      echo ' <div class="row">';
+      echo     ' <div class="col-lg-6 left-side">';
+      echo        ' <img src="./images/Samsung-Galaxy-A01.jpg" alt="">';
+      echo       '</div>'
+      echo    '  <div class="col-lg-6 right-side">';
+      echo       '  <h1>Samsung Galaxy A01</h1>';
+       echo         '<h6>Rs 43,999</h6>';
+       echo       '  <hr>';
+        echo       ' <ul>';
+        echo         '   <li>64MP AI quad camera</li>';
+         echo           '<li>Qualcomm® SnapdragonTM 720G</li>';
+         echo          ' <li>5020mAh Battery</li>';
+         echo           '<li>6.67  DotDisplay</li>';
+          echo         ' <li>16MP In-Display Front Camera</li>';
+          echo         ' <li>Height: 165.75mm Width: 76.68mm Thickness: 8.8mm Weight: 209g</li>';
+          echo          '<li>Supports 2+1 card slot, nano-SIM + nano-SIM + microSD (512GB expandable)</li>';
+          echo        '  <li>6GB RAM</li>';
+          echo         ' <li>64GB ROM</li>';
+          echo      '</ul>'
+           echo    ' <button class="btn btn-outline-warning"  href="admin.php"  style="display: block; margin-left: 25%;"><i';
+           echo    '  class="fas fa-shopping-cart"></i>&nbsp Add To';
+           echo        ' Cart</button>';
+          echo'  </div>';
+       echo '</div>';
+      ?>
     </section>
 
     <footer style="margin-top: 3%">
