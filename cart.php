@@ -3,6 +3,11 @@
     $pid=$_GET['ProductID'];
     $sql = "SELECT * FROM products where `ProductID`= '$pid' ";
     $result = mysqli_query($conn,$sql);
+    session_start();
+    if(empty($_SESSION['cart'])){
+      $_SESSION['cart'] =array();
+    }
+    array_push($_SESSION['cart'],$pid)
     
  ?>
 
