@@ -1,7 +1,9 @@
 <?php
     $conn = new mysqli("localhost","root","","webroject");
-    $sql = "SELECT * FROM products where Brand='iphone' ";
+   
     $result = mysqli_query($conn,$sql);
+    $pid=$_GET['ProductId'];
+    $sql = "SELECT * FROM products where `ProductID`= '$pid' ";
  ?>
 
 <!DOCTYPE html>

@@ -2,6 +2,7 @@
     $conn = new mysqli("localhost","root","","webroject");
     $sql = "SELECT * FROM products where Brand='iphone' ";
     $result = mysqli_query($conn,$sql);
+    $pid=$_GET['ProductID'];
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -97,7 +98,7 @@
               echo " <p>'".$row['price']."'</p>";
                       
                   
-               echo  " <a href='product.php'><button type='button' class='btn btn-warning'>Buy</button> </a>";
+              echo  " <a href=product.php?ProductID=".$row['ProductID']."><button type='button' class='btn btn-warning'>Buy</button> </a>";
                  echo  "</div>";
               echo"</div>";
               
