@@ -80,20 +80,21 @@
       echo       '</div>';
       echo    '  <div class="col-lg-6 right-side">' ;
       echo       " <h1>'".$row['Name']."'</h1>";
-       echo         "<h6>PRICE'".$row['price']."'</h6>";
+       echo         "<h2>PRICE=$'".$row['price']."'</h2>";
        echo       '  <hr>';
-        
+        echo " <h2>Description</h2> ";
         echo     " '".$row['Description']."' ";
-     echo    ' <button class="btn btn-outline-warning"  href="admin.php"  style="display: block; margin-left: 25%;"><i';
+     echo   " <a href=cart.php?ProductID=".$row['ProductID']." style='display: block; margin-left: ;'><i";
          echo    '  class="fas fa-shopping-cart"></i>&nbsp Add To';
          echo        ' Cart</button>';
         echo'  </div>';
        echo '</div>';
      }
       ?>
+
     </section>
 
-    <footer style="margin-top: 3%">
+    <footer style="margin-top: 3%;width:100%;">
     
       <br />
       <div class="container">

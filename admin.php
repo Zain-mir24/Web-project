@@ -84,7 +84,17 @@ if(isset($_REQUEST['update']))
 
                      
          }
+         
 }
+
+    
+        if(isset($_REQUEST['delete'])){
+            $product_id = $_POST['ProductID'];
+            $sql = "DELETE from products where `ProductID`='$product_id'";
+            $result = mysqli_query($conn,$sql);             
+             } 
+        
+ 
 
 
    ?>

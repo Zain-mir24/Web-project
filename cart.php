@@ -1,3 +1,11 @@
+<?php
+    $conn = new mysqli("localhost","root","","webroject");
+    $pid=$_GET['ProductID'];
+    $sql = "SELECT * FROM products where `ProductID`= '$pid' ";
+    $result = mysqli_query($conn,$sql);
+    
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,54 +75,31 @@
 <!-- main body section-->
 
 <section class="cart">
-<div class="container">
-<div class="row">
-<div class="col-lg-3">
-<h2>product</h2>
- <img src="images/6iphon.jfif"  style="height: 100px;" alt="">
+<?php
+ while($row=mysqli_fetch_array($result)){ 
+  echo '<div class="container">';
+   echo '<div class="row">';
+   echo '<div class="col-lg-3">';
+  echo "<h2>product</h2>";
+  echo "<img src='images/".$row['images']."' style='height: 100px;' >";
 
-</div>
+ echo "</div>";
 
-<div class="col-lg-3">
-  <h2>description</h2>
-  This is Apple iphone 6(64gb) - green version
-</div>
+echo '<div class="col-lg-3">';
+echo  "<h2>description</h2>";
+echo     " '".$row['Description']."' ";
+echo "</div>";
  
 
-<div class="col-lg-3">
-  <h2>Price</h2>
-  <p>Price:$779.00</p>
+echo '<div class="col-lg-3">';
+ echo " <h2>Price</h2>";
+ echo "<p>Price:$'".$row['price']."'</p>";
 
 
-</div>
-<div class="col-lg-3">
-  <h2>quantity</h2>
-  <p>1</p>
+echo "</div>";
+ }
+?>
 
-</div>
-
-<div class="col-lg-3">
-  <h2>product</h2>
-   <img src="images/6iphon.jfif"  style="height: 100px;" alt="">
-  
-  </div>
-  
-  <div class="col-lg-3">
-  <h2>description</h2>
-  This is Apple iphone 6(64gb) - green version
- </div>
-  
-
-  <div class="col-lg-3">
-    <h2>Price</h2>
-    <p>Price:$779.00</p>
-  </div>
-  
-  <div class="col-lg-3">
-    <h2>quantity</h2>
-    <p>1</p>
-  
-  </div>
 
 </div>
 
@@ -125,6 +110,11 @@
 
 
 </section>
+<br>
+<br>
+<br>
+<br>
+
 <br>
 <br>
 <br>
