@@ -1,9 +1,9 @@
 <?php
     $conn = new mysqli("localhost","root","","webroject");
-   
-    $result = mysqli_query($conn,$sql);
-    $pid=$_GET['ProductId'];
+    $pid=$_GET['ProductID'];
     $sql = "SELECT * FROM products where `ProductID`= '$pid' ";
+    $result = mysqli_query($conn,$sql);
+    
  ?>
 
 <!DOCTYPE html>
@@ -73,11 +73,12 @@
     
     <section>
     <?php
+     while($row=mysqli_fetch_array($result)){ 
       echo ' <div class="row">';
       echo     ' <div class="col-lg-6 left-side">';
-      echo        ' <img src="./images/Samsung-Galaxy-A01.jpg" alt="">';
+      echo        "<img src='images/".$row['images']."' >";
       echo       '</div>';
-      echo    '  <div class="col-lg-6 right-side">';
+      echo    '  <div class="col-lg-6 right-side">' ;
       echo       '  <h1>Samsung Galaxy A01</h1>';
        echo         '<h6>Rs 43,999</h6>';
        echo       '  <hr>';
@@ -97,6 +98,7 @@
            echo        ' Cart</button>';
           echo'  </div>';
        echo '</div>';
+     }
       ?>
     </section>
 

@@ -2,7 +2,6 @@
     $conn = new mysqli("localhost","root","","webroject");
     $sql = "SELECT * FROM products where Brand='iphone' ";
     $result = mysqli_query($conn,$sql);
-    $pid=$_GET['ProductID'];
  ?>
 <!DOCTYPE html>
 <html lang="en">
