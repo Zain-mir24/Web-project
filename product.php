@@ -74,7 +74,7 @@
       echo ' <div class="row">';
       echo     ' <div class="col-lg-6 left-side">';
       echo        ' <img src="./images/Samsung-Galaxy-A01.jpg" alt="">';
-      echo       '</div>'
+      echo       '</div>';
       echo    '  <div class="col-lg-6 right-side">';
       echo       '  <h1>Samsung Galaxy A01</h1>';
        echo         '<h6>Rs 43,999</h6>';
@@ -89,7 +89,7 @@
           echo          '<li>Supports 2+1 card slot, nano-SIM + nano-SIM + microSD (512GB expandable)</li>';
           echo        '  <li>6GB RAM</li>';
           echo         ' <li>64GB ROM</li>';
-          echo      '</ul>'
+          echo      '</ul>';
            echo    ' <button class="btn btn-outline-warning"  href="admin.php"  style="display: block; margin-left: 25%;"><i';
            echo    '  class="fas fa-shopping-cart"></i>&nbsp Add To';
            echo        ' Cart</button>';
