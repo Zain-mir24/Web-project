@@ -1,7 +1,7 @@
 <?php
     $conn = new mysqli("localhost","root","","webroject");
-           $sql = "SELECT * FROM products where Brand='iphone' ";
-         $result = mysqli_query($conn,$sql);
+    $sql = "SELECT * FROM products where Brand='iphone' ";
+    $result = mysqli_query($conn,$sql);
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -101,21 +101,7 @@
                  echo  "</div>";
               echo"</div>";
               
-            //   echo " <div class='col-md-3 mobile'>";
-            //    echo   "  <div class='iphone'>";
-            //    echo      " <h1>'".$row['Name']."'</h1>"; 
-
-            //     echo "<img src='images/".$row['images']."' style='height:150px;'a>";  
-                    
-            //             echo  " <div class='description'>";
-            //             echo     " '".$row['Description']."' ";
-            //             echo  " </div>";
-            //              echo " <p>'".$row['price']."'</p>";
-                         
-                     
-            //       echo  " <a href='admin.php'><button type='button' class='btn btn-warning'>Buy</button> </a>";
-            //         echo  "</div>"
-            //      echo"</div>";
+       
             }?> 
                 
     </section>

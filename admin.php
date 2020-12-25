@@ -48,7 +48,7 @@ if(isset($_REQUEST['submit']))
 }
 ?>
 <!-- UPDATE ka code -->
-<?php
+<?php   
 $servername = "localhost";
 $username = "username";
 $Email ="Email";
@@ -64,19 +64,23 @@ if(isset($_REQUEST['update']))
           echo "Fill all the fields";
          }
          else{
-          $mobilename= $_GET['updatemobile'];
-          $RAM = $_GET['updateRAM'];
-          $description =$_GET['description1'];
-          $ROM=$_GET['updateROM'];
-          $productid=$_GET['productID'];
-          $brand=$_GET['brand'];      
-          $sql=$sql = "UPDATE products SET `Name`='$mobilename',`Description`='$description', `RAM`='$RAM',`ROM`='$ROM',`Brand`=$brand WHERE ProductID='$productid'";
+            
+          $mobilename= $_POST['updatemobile'];
+          $RAM = $_POST['updateRAM'];
+          $description =$_POST['description1'];
+          $ROM=$_POSt['updateROM'];
+          $productid=$_POST['productID'];
+          $brand=$_POST['brand'];     
+          $image=$_FILES['Rimage']['name'];
+          $destination="images/".basename($_FILES['Rimage']['name']); 
+          $sql = "UPDATE products SET `Name`='$mobilename',`Description`='$description', `RAM`='$RAM',`ROM`='$ROM',`Brand`='$brand',`images`='$image' WHERE `ProductID`='$productid'";
           if ($conn->query($sql) === TRUE) {
             header("Location: http://localhost/Project 1/index.php");
             exit;
-                     } else {
+               }
+         else {
                        echo "Error Entering database: " . $conn->error;
-                     } 
+                } 
 
                      
          }
@@ -154,7 +158,7 @@ if(isset($_REQUEST['update']))
     <br>
     <section id="update" style="border:2px solid black; background-color: beige;">
         <h1 style="text-align: center; font-size: 2rem;">Update Mobile</h1>
-        <form action="">
+        <form action="" method="POST" enctype="multipart/form-data">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -176,7 +180,12 @@ if(isset($_REQUEST['update']))
                                 <label for="name">ROM: &nbsp</label><input type="text" name="updateROM">
                             </div>
                             <div class="col-lg-6">
-                                <label for="name">Band: &nbsp</label><input type="text" name="brand">
+                    <label for="brand">Samsung</label>    <input type="radio" name="brand" value="samsung">
+                    <label for="brand">Iphone</label>    <input type="radio" name="brand" value="iphone">
+                    </div>
+                            <div class="col-lg-6">
+                        <label for="Rimage">Select Image</label>
+                        <input name="Rimage" type="file">
                             </div>
                         </div>
                     </div>
