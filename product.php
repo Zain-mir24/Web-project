@@ -76,27 +76,18 @@
      while($row=mysqli_fetch_array($result)){ 
       echo ' <div class="row">';
       echo     ' <div class="col-lg-6 left-side">';
-      echo        "<img src='images/".$row['images']."' >";
+      echo        "<img src='images/".$row['images']."'style='height:500px;' >";
       echo       '</div>';
       echo    '  <div class="col-lg-6 right-side">' ;
-      echo       '  <h1>Samsung Galaxy A01</h1>';
-       echo         '<h6>Rs 43,999</h6>';
+      echo       " <h1>'".$row['Name']."'</h1>";
+       echo         "<h6>PRICE'".$row['price']."'</h6>";
        echo       '  <hr>';
-        echo       ' <ul>';
-        echo         '   <li>64MP AI quad camera</li>';
-         echo           '<li>Qualcomm® SnapdragonTM 720G</li>';
-         echo          ' <li>5020mAh Battery</li>';
-         echo           '<li>6.67  DotDisplay</li>';
-          echo         ' <li>16MP In-Display Front Camera</li>';
-          echo         ' <li>Height: 165.75mm Width: 76.68mm Thickness: 8.8mm Weight: 209g</li>';
-          echo          '<li>Supports 2+1 card slot, nano-SIM + nano-SIM + microSD (512GB expandable)</li>';
-          echo        '  <li>6GB RAM</li>';
-          echo         ' <li>64GB ROM</li>';
-          echo      '</ul>';
-           echo    ' <button class="btn btn-outline-warning"  href="admin.php"  style="display: block; margin-left: 25%;"><i';
-           echo    '  class="fas fa-shopping-cart"></i>&nbsp Add To';
-           echo        ' Cart</button>';
-          echo'  </div>';
+        
+        echo     " '".$row['Description']."' ";
+     echo    ' <button class="btn btn-outline-warning"  href="admin.php"  style="display: block; margin-left: 25%;"><i';
+         echo    '  class="fas fa-shopping-cart"></i>&nbsp Add To';
+         echo        ' Cart</button>';
+        echo'  </div>';
        echo '</div>';
      }
       ?>
