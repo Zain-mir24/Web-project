@@ -49,6 +49,9 @@
             <a class="nav-link" style="font-size: 20px;" href="login.php">Login</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" style="font-size: 20px;" href="logout.php">Logout</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" style="font-size: 20px;" href="signup.php">signup</a>
           </li>
 
