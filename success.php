@@ -70,7 +70,8 @@
           <h1>Your Order Has Been Successfully Placed</h1>
           <?php
           session_start();  
-          echo "<p>Your Order ID is: ".$_SESSION['oid']."  </p>" ?>
+          echo "<p>Your Order ID is: ".$_SESSION['oid']."  </p>" ;
+          ?>
       </div>
   </section>
 

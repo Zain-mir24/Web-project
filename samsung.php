@@ -126,7 +126,7 @@
             <div class="col-lg-6" style="color: grey;">
               <h3 style="color: grey;">Our Company</h3>
               <br />
-              <p style="color: grey;">Track Your Order</p>
+              <a href="status.php"><p style="color: grey;">Track Your Order</p></a>
               <p style="color: grey;">Terms & Condition</p>
             </div>
          

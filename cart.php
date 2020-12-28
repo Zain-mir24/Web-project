@@ -8,15 +8,21 @@ $result = mysqli_query($conn,$sql);
   
 
   
-  // ORDERS SECTION
-  if(isset($_REQUEST['order'])){
+if(isset($_REQUEST['order'])){
   $fname= $_POST["name"];
   $address = $_POST["address"];
-  $status = "Active";
+  $p_method=$_POST["p-method"];
+  $status = "Processing";
 
   $sql = "INSERT INTO orders(Name,Address,Status,ProductID) VALUES ('$fname','$address','$status','$pid')";
   mysqli_query($conn,$sql);
-  // echo"Registration Successfull";
+  
+  $mysql = "SELECT * FROM orders WHERE `Name`='$fname' AND `Address`='$address' AND `ProductID`='$pid'";
+  $result=mysqli_query($conn,$mysql);
+  $row = mysqli_fetch_array($result);
+  $_SESSION['oid']=$row['orderID'];
+  header("Location: http://localhost/Project 1/success.php");
+  exit;
   }
 
 
@@ -102,25 +108,25 @@ $result = mysqli_query($conn,$sql);
 </div> -->
 
 <?php
- while($row=mysqli_fetch_array($result)){ 
+ $row = mysqli_fetch_array($result);
     echo '<div class="container">';
     echo '<div class="row">';
     echo '<div class="col-lg-4">';
     echo '<h2>product</h2><br>';
-    echo '<img src=images/'.$row['images'].'  style="height: 100px;" alt="">';
+    echo  "<img src='images/".$row['images']."'style='height:100px;' >";
 
     echo '</div>';
 
     echo '<div class="col-lg-4">';
     echo '<h2>description</h2><br>';
-    echo     " <h1>'".$row['Description']."'</h1>";
+    echo   " '".$row['Description']."' ";
     echo '</div>';
 
     echo '<div class="col-lg-4">';
     echo '<h2>Price</h2><br>';
-    echo '<p>'.$row['price'].'</p></div>';
+    echo "<p>'".$row['price']."'</p></div>";
 
- }
+   
 ?>
 
 <!-- <div class="col-lg-3">
@@ -144,17 +150,10 @@ $result = mysqli_query($conn,$sql);
       <td><label for="address">Address: &nbsp&nbsp&nbsp&nbsp</label><textarea style="resize:none" name="address" id="" cols="31" rows="2"></textarea></td>
     </tr>
     <tr>
-  
-      
-    <td>
- <br>
- <?php
-    
-    echo "<a name='order'href=success.php?ProductID=".$row['ProductID']."type='submit'>Place Your Order</a>";
-    echo "</td>";
-    
-       
-      ?>
+      <td>
+        <br><br>
+        <button name="order" class="btn btn-warning btn-lg" type="submit">Place Your Order</button> 
+      </td>
     </tr>
   </table>
 
