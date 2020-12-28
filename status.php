@@ -78,25 +78,27 @@
  <div class="row">
 <div class="col-lg-6">
    
-<h2>Enter your product ID</h2>
+<h2>your product ID is</h2>
 </div>
- <div class="col-lg-6">
-    <input type="id" id="inputpassword" class="form-control" placeholder="ID" required autofocus>
+<?php
+ while($row=mysqli_fetch_array($result)){ 
+  echo '<div class="col-lg-6">';
 
- </div>
+  echo     "<h2> '".$row['ProductID']."' </h2>";
+
+  echo "</div>";
+ }
+ ?>
 <br>
 <br>
 <br>
 <br>
 <br><br>
- <div class="col-lg-6">
+ <div class="col-lg-12">
    
-    <h2>Showing your Status</h2>
+    <h2>Thankyou for buying from MobiStore! :)</h2>
     </div>
-     <div class="col-lg-6">
-        <input type="id" id="inputpassword" class="form-control" placeholder="status" required autofocus>
-    
-     </div>
+     
 
 
 
