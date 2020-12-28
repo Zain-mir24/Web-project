@@ -59,10 +59,7 @@
          <a class="nav-link" style="font-size: 20px;" href="signup.php">signup</a>
        </li>
 
-       <li class="nav-item">
-         <a href="cart.php"> <i class="fa fa-2x fa-shopping-cart" style="margin-right:20px;margin-top: 10px ;"
-             aria-hidden="true"></i> </a>
-       </li>
+ 
      </ul>
      
    </div>

@@ -82,15 +82,7 @@ if(isset($_REQUEST['order'])){
             <a class="nav-link" style="font-size: 20px;" href="signup.php">signup</a>
           </li>
 
-          <li class="nav-item">
-            <a href="cart.php"> <i class="fa fa-2x fa-shopping-cart" style="margin-right:20px;margin-top: 10px ;"
-                aria-hidden="true"></i> </a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+         
       </div>
     </nav>
   </header>
