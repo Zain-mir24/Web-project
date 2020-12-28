@@ -1,24 +1,21 @@
 <?php
-  session_start();
-  $conn = new mysqli("localhost","root","","webroject");
-  $pid=$_GET['pid'];
-  
-  $sql = "SELECT * FROM products where `pid`= '$pid' ";
-  $result = mysqli_query($conn,$sql);
-  $row = mysqli_fetch_array($result);
 
+$conn = new mysqli("localhost","root","","webroject");
+$pid=$_GET['ProductID'];
+$sql = "SELECT * FROM products where `ProductID`= '$pid' ";
+$result = mysqli_query($conn,$sql);
+if($row=mysqli_fetch_array($result)){
   $name = $row['Name'];
-  $price = $row['Price'];
+  $price = $row['price'];
   $image = $row['images'];
-
   $product = array($name,$price,$image);
-  $_SESSION[$name] = $product;
-
+ }
+  
   // ORDERS SECTION
   if(isset($_REQUEST['order'])){
   $fname= $_POST["name"];
   $address = $_POST["address"];
-  $status = "Processing";
+  $status = "Active";
 
   $sql = "INSERT INTO orders(Name,Address,Status,ProductID) VALUES ('$fname','$address','$status','$pid')";
   mysqli_query($conn,$sql);
@@ -108,6 +105,7 @@
 </div> -->
 
 <?php
+ while($row=mysqli_fetch_array($result)){ 
     echo '<div class="container">';
     echo '<div class="row">';
     echo '<div class="col-lg-4">';
@@ -118,14 +116,14 @@
 
     echo '<div class="col-lg-4">';
     echo '<h2>description</h2><br>';
-    echo  $row['Description'];
+    echo     " <h1>'".$row['Descripton']."'</h1>";
     echo '</div>';
 
     echo '<div class="col-lg-4">';
     echo '<h2>Price</h2><br>';
     echo '<p>'.$row['Price'].'</p></div>';
 
-   
+ }
 ?>
 
 <!-- <div class="col-lg-3">
