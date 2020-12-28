@@ -1,9 +1,33 @@
 <?php
-    $conn = new mysqli("localhost","root","","webroject");
-    $pid=$_GET['ProductID'];
-    $sql = "SELECT * FROM products where `ProductID`= '$pid' ";
-    $result = mysqli_query($conn,$sql);     
- ?>
+  session_start();
+  $conn = new mysqli("localhost","root","","webroject");
+  $pid=$_GET['pid'];
+  
+  $sql = "SELECT * FROM products where `pid`= '$pid' ";
+  $result = mysqli_query($conn,$sql);
+  $row = mysqli_fetch_array($result);
+
+  $name = $row['Name'];
+  $price = $row['Price'];
+  $image = $row['images'];
+
+  $product = array($name,$price,$image);
+  $_SESSION[$name] = $product;
+
+  // ORDERS SECTION
+  if(isset($_REQUEST['order'])){
+  $fname= $_POST["name"];
+  $address = $_POST["address"];
+  $status = "Processing";
+
+  $sql = "INSERT INTO orders(Name,Address,Status,ProductID) VALUES ('$fname','$address','$status','$pid')";
+  mysqli_query($conn,$sql);
+  // echo"Registration Successfull";
+  }
+
+
+?>
+
 
 
 <!DOCTYPE html>
@@ -73,39 +97,67 @@
 
 
 <!-- main body section-->
-
+<br><br>
 <section class="cart">
+<!-- <div class="container">
+<div class="row">
+<div class="col-lg-3">
+<h2>product</h2>
+ <img src="images/6iphon.jfif"  style="height: 100px;" alt="">
+
+</div> -->
+
 <?php
- while($row=mysqli_fetch_array($result)){ 
-  echo '<div class="container">';
-   echo '<div class="row">';
-   echo '<div class="col-lg-3">';
-  echo "<h2>product</h2>";
-  echo "<img src='images/".$row['images']."' style='height: 100px;' >";
+    echo '<div class="container">';
+    echo '<div class="row">';
+    echo '<div class="col-lg-4">';
+    echo '<h2>product</h2><br>';
+    echo '<img src=images/'.$row['images'].'  style="height: 100px;" alt="">';
 
- echo "</div>";
+    echo '</div>';
 
-echo '<div class="col-lg-3">';
-echo  "<h2>description</h2>";
-echo     " '".$row['Description']."' ";
-echo "</div>";
- 
+    echo '<div class="col-lg-4">';
+    echo '<h2>description</h2><br>';
+    echo  $row['Description'];
+    echo '</div>';
 
-echo '<div class="col-lg-3">';
- echo " <h2>Price</h2>";
- echo "<p>Price:$'".$row['price']."'</p>";
- echo "</div>";
+    echo '<div class="col-lg-4">';
+    echo '<h2>Price</h2><br>';
+    echo '<p>'.$row['Price'].'</p></div>';
 
- echo '<div class="col-lg-3">';
- echo " <h2>Track your order</h2>";
- echo  " <a href=status.php?ProductID=".$row['ProductID']."><button type='button' class='btn btn-warning'>Track your order</button> </a>";
- echo "</div>";
- }
+   
 ?>
 
+<!-- <div class="col-lg-3">
+  <h2>Checkout</h2>
+  <br>
+  <a href=""><button class="btn btn-warning btn-lg">Place Your Order</button></a>
+</div> -->
 
 </div>
 
+</div>
+
+<br>
+<div class="container">
+<form action="" method="POST">
+  <table>
+    <tr>
+      <td><label for="name">Full Name: &nbsp</label><input name="name" style="width:300px" type="text" required></td>
+    </tr>
+    <tr>
+      <td><label for="address">Address: &nbsp&nbsp&nbsp&nbsp</label><textarea style="resize:none" name="address" id="" cols="31" rows="2"></textarea></td>
+    </tr>
+    <tr>
+      <td>
+        <br><br>
+        <button name="order" class="btn btn-warning btn-lg" type="submit">Place Your Order</button> 
+      </td>
+    </tr>
+  </table>
+
+</form>
+</div>
 
 
 
@@ -115,15 +167,9 @@ echo '<div class="col-lg-3">';
 </section>
 <br>
 <br>
+<br>  
 <br>
 <br>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br><br>
 
 <footer style="margin-top: 3%">
     
@@ -142,7 +188,7 @@ echo '<div class="col-lg-3">';
       <div class="col-lg-6" style="color: grey;">
         <h3 style="color: grey;">Our Company</h3>
         <br />
-        <p style="color: grey;">Track Your Order</p>
+        <a href="status.php"><p style="color: grey;">Track Your Order</p></a>
         <p style="color: grey;">Terms & Condition</p>
       </div>
    
