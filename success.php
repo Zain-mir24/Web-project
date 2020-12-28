@@ -64,54 +64,17 @@
     </nav>
   </header>
 
-<br>
+
   <section>
-
-<form action="" method="POST">
-  <div class="container">
-  <div class="row">
-  <div class="col-lg-12">
-    <label for="orderID">Enter Your Order ID</label><input name="orderID" type="Order ID" id="inputpassword" class="form-control" placeholder="ID" required autofocus>
-  </div>
-  </div>
-  </div>
-  <br>
-  <div class="container">
-  <button type="submit"  name="status" class="btn btn-warning btn-lg">Submit</button>
-  </div>
-  
-</form>
-
-<?php
-$conn = new mysqli("localhost","root","","webroject");
-  if(isset($_REQUEST["status"])){
-    $oid = $_POST['orderID'];
-    $query ="SELECT * FROM `orders` where orderID='$oid'";
-    $result = mysqli_query($conn,$query);
-    $row = mysqli_fetch_array($result);
-
-    $status = $row['Status'];
-
-    echo "<br><div class='container'><h4>Your Order Status is: ".$status." </h4></div>";
-  }
-?>
-
-<br>
-<br>
-<br>
-<br>
-<br><br>
-<div class="col-lg-6">
-</div>
-</div>
+      <div class="jumbotron">
+          <h1>Your Order Has Been Successfully Placed</h1>
+          <?php
+          session_start();  
+          echo "<p>Your Order ID is: ".$_SESSION['oid']."  </p>" ?>
+      </div>
   </section>
-  <br>
-  <br>
-  <br>
-  <br><br><br>
-     
 
-  
+
   <footer style="margin-top: 3%">
     
     <br />
@@ -137,7 +100,7 @@ $conn = new mysqli("localhost","root","","webroject");
       </div>
     </div>
     <br />
-    </footer>
+  </footer>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

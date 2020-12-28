@@ -1,15 +1,12 @@
 <?php
-
+ session_start();
 $conn = new mysqli("localhost","root","","webroject");
 $pid=$_GET['ProductID'];
 $sql = "SELECT * FROM products where `ProductID`= '$pid' ";
 $result = mysqli_query($conn,$sql);
-if($row=mysqli_fetch_array($result)){
-  $name = $row['Name'];
-  $price = $row['price'];
-  $image = $row['images'];
-  $product = array($name,$price,$image);
- }
+
+  
+
   
   // ORDERS SECTION
   if(isset($_REQUEST['order'])){
@@ -116,12 +113,12 @@ if($row=mysqli_fetch_array($result)){
 
     echo '<div class="col-lg-4">';
     echo '<h2>description</h2><br>';
-    echo     " <h1>'".$row['Descripton']."'</h1>";
+    echo     " <h1>'".$row['Description']."'</h1>";
     echo '</div>';
 
     echo '<div class="col-lg-4">';
     echo '<h2>Price</h2><br>';
-    echo '<p>'.$row['Price'].'</p></div>';
+    echo '<p>'.$row['price'].'</p></div>';
 
  }
 ?>
@@ -147,10 +144,17 @@ if($row=mysqli_fetch_array($result)){
       <td><label for="address">Address: &nbsp&nbsp&nbsp&nbsp</label><textarea style="resize:none" name="address" id="" cols="31" rows="2"></textarea></td>
     </tr>
     <tr>
-      <td>
-        <br><br>
-        <button name="order" class="btn btn-warning btn-lg" type="submit">Place Your Order</button> 
-      </td>
+  
+      
+    <td>
+ <br>
+ <?php
+    
+    echo "<a name='order'href=success.php?ProductID=".$row['ProductID']."type='submit'>Place Your Order</a>";
+    echo "</td>";
+    
+       
+      ?>
     </tr>
   </table>
 
