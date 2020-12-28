@@ -1,5 +1,25 @@
 <?php
-session_start();
+    session_start();
+    $con = mysqli_connect("localhost","root","");
+    mysqli_select_db($con,"webroject");
+
+    $name= $_POST["username"];
+    $email = $_POST["Email"];
+    $pass=$_POST["Password"];
+
+    $check = "SELECT * FROM usersignup WHERE Email='$email'";
+    $result = mysqli_query($con,$check);
+    $num = mysqli_num_rows($result);
+    if($num == 1){
+        echo "username already taken";
+    }
+    else{
+        $sql = "INSERT INTO usersignup(Name,Email,Password) VALUES ('$name','$email','$pass')";
+        mysqli_query($con,$sql);
+        echo"Registration Successfull";
+        header("Location: http://localhost/Project 1/index.php");
+        exit;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +42,7 @@ session_start();
  
  <nav style="margin-top: -10px; border-bottom: 1px solid #8b0000; text-align: center;min-height: 20%; padding: 2%;"
    class="navbar navbar-expand-lg navbar-dark bg-dark">
-   <a class="navbar-brand nav-logo" href="index.php"><span style="color: blue;font-size: 30px;">Mobi</span> <span
+   <a class="navbar-brand nav-logo" href=""><span style="color: blue;font-size: 30px;">Mobi</span> <span
        style="color: red;font-size: 30px;">store</span></a>
    <button style="margin-right: 29%;" class="navbar-toggler" type="button" data-toggle="collapse"
      data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
@@ -30,40 +50,6 @@ session_start();
      <span class="navbar-toggler-icon"></span>
    </button>
 
-   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-     <ul class="navbar-nav ml-auto mt-lg-0">
-    
-       <li class="nav-item">
-         <a class="nav-link" style="font-size: 20px;" href="index.php"> Welcome </a>
-       </li>
-       <li class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle" style="font-size: 20px;" href="#" id="navbarDropdownMenuLink"
-           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Phone
-         </a>
-         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-           <a class="dropdown-item" href="iphone.php">Iphone</a>
-           <a class="dropdown-item" href="samsung.php">Samsung</a>
-
-         </div>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link" style="font-size: 20px;" href="login.php">Login</a>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link" style="font-size: 20px;" href="logout.php">Logout</a>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link" style="font-size: 20px;" href="signup.php">signup</a>
-       </li>
-
-       <li class="nav-item">
-         <a href="cart.php"> <i class="fa fa-2x fa-shopping-cart" style="margin-right:20px;margin-top: 10px ;"
-             aria-hidden="true"></i> </a>
-       </li>
-     </ul>
-     
-   </div>
  </nav>
 </header>
 

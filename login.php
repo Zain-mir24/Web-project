@@ -34,34 +34,15 @@
    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
      <ul class="navbar-nav ml-auto mt-lg-0">
     
-       <li class="nav-item">
-         <a class="nav-link" style="font-size: 20px;" href="index.php"> Welcome </a>
-       </li>
-       <li class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle" style="font-size: 20px;" href="#" id="navbarDropdownMenuLink"
-           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Phone
-         </a>
-         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-           <a class="dropdown-item" href="iphone.php">Iphone</a>
-           <a class="dropdown-item" href="samsung.php">Samsung</a>
-
-         </div>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link" style="font-size: 20px;" href="login.php">Login</a>
-       </li>
-       <li class="nav-item">
-         <a class="nav-link" style="font-size: 20px;" href="logout.php">Logout</a>
-       </li>
+      
+     
+     
+      
        <li class="nav-item">
          <a class="nav-link" style="font-size: 20px;" href="signup.php">signup</a>
        </li>
 
-       <li class="nav-item">
-         <a href="cart.php"> <i class="fa fa-2x fa-shopping-cart" style="margin-right:20px;margin-top: 10px ;"
-             aria-hidden="true"></i> </a>
-       </li>
+     
      </ul>
      
    </div>

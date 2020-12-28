@@ -94,9 +94,12 @@ echo "</div>";
 echo '<div class="col-lg-3">';
  echo " <h2>Price</h2>";
  echo "<p>Price:$'".$row['price']."'</p>";
+ echo "</div>";
 
-
-echo "</div>";
+ echo '<div class="col-lg-3">';
+ echo " <h2>Track your order</h2>";
+ echo  " <a href=status.php?ProductID=".$row['ProductID']."><button type='button' class='btn btn-warning'>Track your order</button> </a>";
+ echo "</div>";
  }
 ?>
 
@@ -120,6 +123,7 @@ echo "</div>";
 <br>
 <br>
 <br>
+<br><br>
 
 <footer style="margin-top: 3%">
     
