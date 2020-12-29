@@ -98,6 +98,16 @@ if(isset($_REQUEST['update']))
 
 
    ?>
+   <!-- Orders Code -->
+   <?php
+        if(isset($_REQUEST['orders'])){
+            $orderID = $_POST['oid'];
+            $status = $_POST['status'];
+
+            $sql = "UPDATE orders SET `Status`='$status' WHERE `orderID`='$orderID'";
+            $result=mysqli_query($conn,$sql);
+        }
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -206,6 +216,35 @@ if(isset($_REQUEST['update']))
             </div>
         </form>
         <br>
+    </section>
+    <section id="orders" style="border:2px solid black; background-color: beige;">
+             <h1 style="text-align:center">Orders Section</h1>
+             <div class="container">
+             <form action="" method="POST">
+                <label for="oid">Enter order ID: &nbsp</label><input type="text" name="oid" required>
+                <label for="status">New Status: &nbsp</label><input type="text" name="status" required>
+                <br><button class="btn btn-outline-dark btn-md" type="submit" name="orders">Submit</button>
+             </form><br>
+             <table border="2px">
+                <tr>
+                    <th>OrderID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Status</th>
+                    <th>Product ID</th>
+                </tr>
+                <?php
+                    $sql = "SELECT * from orders";
+                    $result = $conn-> query($sql);
+                    if($result-> num_rows > 0){
+                        while($row = $result-> fetch_assoc()){
+                            echo "<tr><td>".$row['orderID']."</td><td>".$row['Name']."</td><td>".$row['Address']."</td><td>".$row['Status']."</td><td>".$row['ProductID']."</td></tr>";
+                        }
+                    }
+                ?>
+             </table>    
+             <br><br>
+             </div>
     </section>
 
      
