@@ -52,23 +52,17 @@
 
          </div>
        </li>
-       <li class="nav-item">
-         <a class="nav-link" style="font-size: 20px;" href="index.php">Login</a>
-       </li>
+       
        <li class="nav-item">
          <a class="nav-link" style="font-size: 20px;" href="logout.php">Logout</a>
        </li>
-       <li class="nav-item">
-         <a class="nav-link" style="font-size: 20px;" href="signup.php">signup</a>
-       </li>
-
       
+
      </ul>
      
    </div>
  </nav>
 </header>
-    
     <section>
     <?php
      while($row=mysqli_fetch_array($result)){ 
