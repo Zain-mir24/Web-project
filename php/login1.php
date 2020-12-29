@@ -15,11 +15,11 @@
             $name=mysqli_query($con,"SELECT Name FROM usersignup WHERE Email='$email' && Password='$pass'");
             $sql=mysqli_fetch_array($name);
             $_SESSION['name']=$sql['Name'];
-            header("Location: http://localhost/Project 1/index.php");
+            header("Location: http://localhost/Project 1/login.php");
             exit;
     }
     else{
-            header("Location: http://localhost/Project 1/login.php");
+            header("Location: http://localhost/Project 1/index.php");
             exit;
     }
     ?>

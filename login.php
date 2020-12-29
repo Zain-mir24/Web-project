@@ -93,7 +93,7 @@
             <h1 class="cat-samsung" style="border: 2px solid blue; color: blue">SAMSUNG</h1>
           </a>
           <img src="./images/samsung-logo-png-1285.png" style="width: 100%; border: 2px solid blue; height: 400px"
-            alt="" />
+            alt="" /> 
         </div>
       </div>
     </div>
