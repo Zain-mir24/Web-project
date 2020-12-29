@@ -53,7 +53,7 @@
          </div>
        </li>
        <li class="nav-item">
-         <a class="nav-link" style="font-size: 20px;" href="login.php">Login</a>
+         <a class="nav-link" style="font-size: 20px;" href="index.php">Login</a>
        </li>
        <li class="nav-item">
          <a class="nav-link" style="font-size: 20px;" href="logout.php">Logout</a>
