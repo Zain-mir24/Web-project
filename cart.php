@@ -62,7 +62,7 @@ if(isset($_REQUEST['order'])){
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav ml-auto mt-lg-0">
           <li class="nav-item">
-            <a class="nav-link" style="font-size: 20px;" href="index.php">Home</a>
+            <a class="nav-link" style="font-size: 20px;" href="login.php">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" style="font-size: 20px;" href="#" id="navbarDropdownMenuLink"

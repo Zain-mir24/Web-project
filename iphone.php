@@ -36,7 +36,7 @@
      <ul class="navbar-nav ml-auto mt-lg-0">
     
        <li class="nav-item">
-         <a class="nav-link" style="font-size: 20px;" href="index.php"> Welcome </a>
+         <a class="nav-link" style="font-size: 20px;" href="login.php"> Welcome </a>
        </li>
        <li class="nav-item dropdown">
          <a class="nav-link dropdown-toggle" style="font-size: 20px;" href="#" id="navbarDropdownMenuLink"
