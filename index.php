@@ -37,7 +37,7 @@
       
      
      <li class="nav-item">
-         <a class="nav-link" style="font-size: 20px;" href="admin.php">adminlogin</a>
+         <a class="nav-link" style="font-size: 20px;" href="adminlogin.php">adminlogin</a>
        </li>
       
        <li class="nav-item">
