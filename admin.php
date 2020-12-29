@@ -113,7 +113,9 @@ if(isset($_REQUEST['update']))
     <header>
         <nav style="text-align: center; font-size: 3rem; background-color: grey; color: white;">
             <h1>WELCOME TO ADMINISTRATOR</h1>
+           
         </nav>
+        
     </header>
 
     <section id="Add" style="border:2px solid black; background-color: beige;">
@@ -205,6 +207,25 @@ if(isset($_REQUEST['update']))
         </form>
         <br>
     </section>
+
+     
+<footer style="margin-top: 3%">
+    
+    <br />
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <a style="color: grey;" href="logout.php">Logout</a>
+          <br />
+       
+        </div>
+        
+     
+        </div>
+      </div>
+    </div>
+    <br />
+  </footer>
 </body>
 
 </html>

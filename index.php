@@ -36,7 +36,9 @@
     
       
      
-     
+     <li class="nav-item">
+         <a class="nav-link" style="font-size: 20px;" href="admin.php">adminlogin</a>
+       </li>
       
        <li class="nav-item">
          <a class="nav-link" style="font-size: 20px;" href="signup.php">signup</a>
@@ -73,6 +75,7 @@
                   <label class="custom-control-label" for="customCheck1">Remember password</label>
                 </div>
                 <button class="btn btn-lg btn-primary btn-block text-uppercase" name="Login" type="submit">Login</button>
+                
         
                 <hr class="my-4">
               
