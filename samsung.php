@@ -1,6 +1,6 @@
 <?php
     $conn = new mysqli("localhost","root","","webroject");
-    $sql = "SELECT * FROM products where Brand='iphone' ";
+    $sql = "SELECT * FROM products where Brand='samsung' ";
     $result = mysqli_query($conn,$sql);
  ?>
 <!DOCTYPE html>
