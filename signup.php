@@ -74,7 +74,7 @@
 
          <div class="form-group">
           <label for="Roll">password</label>
-          <input type="text" class="form-control" placeholder="enter the message" id="Roll" name="Password">
+          <input type="password" class="form-control" placeholder="enter the message" id="Roll" name="Password">
          </div>
 
         

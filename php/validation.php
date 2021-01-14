@@ -7,7 +7,7 @@
     $email = $_POST["Email"];
     $pass=$_POST["Password"];
 
-    $check = "SELECT * FROM usersignup WHERE Email='$email'";
+    $check = "SELECT * FROM usersignup WHERE Email='$email' && Password='$pass'";
     $result = mysqli_query($con,$check);
     $num = mysqli_num_rows($result);
     if($num == 1){
