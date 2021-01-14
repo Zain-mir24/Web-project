@@ -87,17 +87,23 @@ if(isset($_REQUEST['update']))
          
 }
 
-    
-        if(isset($_REQUEST['delete'])){
-            $product_id = isset($_GET['name']);
-            $sql = "DELETE from products where `ProductID`='$product_id'";
-            $result = mysqli_query($conn,$sql);             
-             } 
-        
- 
-
-
-   ?>
+    ?>
+    <?php
+    $servername = "localhost";
+    $username = "username";
+    $Email ="Email";
+    $password = "password";
+    $DB= "webroject";
+    $conn = new mysqli("localhost","root","",$DB);
+    if (!$conn) {
+        die("Connection failed: " . $con->connect_error);
+    }
+if(isset($_REQUEST['delete'])){
+    $pid = isset($_GET['ProductID']);
+    $sql = "DELETE from products where `ProductID`='$pid'";
+    $result = mysqli_query($conn,$sql);             
+     }
+ ?>
    <!-- Orders Code -->
    <?php
         if(isset($_REQUEST['orders'])){
@@ -169,10 +175,10 @@ if(isset($_REQUEST['update']))
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <label for="name">Enter Product ID: &nbsp</label><input type="text" name="name">
+                        <label for="ProductID">Enter Product ID: &nbsp</label><input type="text" name="ProductID">
                     </div>
                 </div>
-                <button class="btn btn-md btn-outline-dark"name="delete" type="submit">Submit</button>
+                <button class="btn btn-md btn-outline-dark" name="delete" type="submit">Submit</button>
             </div>
         </form>
         <br>
