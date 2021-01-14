@@ -64,12 +64,9 @@
     
     <section>
         <div style="position: relative;">
-            <img src="https://www.apple.com/v/iphone/home/ap/images/overview/hero/iphone_12_pro__f7wokw1n4lm6_small_2x.jpg"
+            <img src="./images/samsunglogo.png"
                 style="width: 100%; height: 800px;" alt="">
-            <div class="title-txt">
-                <h1>New Apple IPhone 12</h1>
-                <button class="btn btn-lg btn-outline-light">Buy Now</button>
-            </div>
+            
         </div>
     </section>
 
@@ -83,8 +80,6 @@
               echo  "<div class='col-lg-3 col-md-3 mobile'>";
                echo    " <div class='iphone' style='height:300px;'>";
                  echo      " <h1>'".$row['Name']."'</h1>"; 
-                 
-                           
               echo "<img src='images/".$row['images']."' style='height:150px;'a>";                
               echo  " <div class='description'>";
               echo     " '".$row['Description']."' ";

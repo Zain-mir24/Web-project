@@ -101,7 +101,7 @@ if(isset($_REQUEST['update']))
     }
 if(isset($_REQUEST['delete'])){
     
-    $pid = $_GET['ProductID'];
+    $pid = $_POST['ProductID'];
    
     $sql = "DELETE from products where `ProductID`='$pid'";
     $result = mysqli_query($conn,$sql);             
