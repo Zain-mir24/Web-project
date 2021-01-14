@@ -1,8 +1,9 @@
 <?php
+
     session_start();
     $con = mysqli_connect("localhost","root","");
     mysqli_select_db($con,"webroject");
-    $email = $_POST["Email"];
+    $email = isset($_POST["Email"]);
     $check = "SELECT * FROM usersignup WHERE Email='$email'";
     $result = mysqli_query($con,$check);
     $num = mysqli_num_rows($result);
