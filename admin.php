@@ -89,7 +89,7 @@ if(isset($_REQUEST['update']))
 
     
         if(isset($_REQUEST['delete'])){
-            $product_id = $_POST['ProductID'];
+            $product_id = isset($_GET['name']);
             $sql = "DELETE from products where `ProductID`='$product_id'";
             $result = mysqli_query($conn,$sql);             
              } 
@@ -172,7 +172,7 @@ if(isset($_REQUEST['update']))
                         <label for="name">Enter Product ID: &nbsp</label><input type="text" name="name">
                     </div>
                 </div>
-                <button class="btn btn-md btn-outline-dark" type="submit">Submit</button>
+                <button class="btn btn-md btn-outline-dark"name="delete" type="submit">Submit</button>
             </div>
         </form>
         <br>
