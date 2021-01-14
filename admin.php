@@ -93,13 +93,16 @@ if(isset($_REQUEST['update']))
     $username = "username";
     $Email ="Email";
     $password = "password";
+ 
     $DB= "webroject";
     $conn = new mysqli("localhost","root","",$DB);
     if (!$conn) {
         die("Connection failed: " . $con->connect_error);
     }
 if(isset($_REQUEST['delete'])){
-    $pid = isset($_GET['ProductID']);
+    
+    $pid = $_GET['ProductID'];
+   
     $sql = "DELETE from products where `ProductID`='$pid'";
     $result = mysqli_query($conn,$sql);             
      }
@@ -171,7 +174,7 @@ if(isset($_REQUEST['delete'])){
     <br>
     <section id="delete" style="border:2px solid black;background-color:beige;">
         <h1 style="text-align: center; font-size: 2rem;">Delete Mobile</h1>
-        <form action="">
+        <form action="" method="POST">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
