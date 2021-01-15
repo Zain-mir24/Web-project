@@ -82,13 +82,13 @@
     <br /><br />
     <div class="container">
       <div class="row">
-        <div class="col-lg-6" style="text-align: center">
+        <div class="col-lg-6  col-md-6 col-sm-6" style="text-align: center">
           <a style="text-decoration: none" href="./iphone.php">
             <h1 class="cat-iphone" style="border: 2px solid black; color: black">iPhone</h1>
           </a>
           <img src="./images/iphone-logo-541.png" style="width: 100%; border: 2px solid black; height: 400px" alt="" />
         </div>
-        <div class="col-lg-6" style="text-align: center">
+        <div class="col-lg-6 col-md-6 col-sm-6" style="text-align: center">
           <a style="text-decoration: none" href="./samsung.php">
             <h1 class="cat-samsung" style="border: 2px solid blue; color: blue">SAMSUNG</h1>
           </a>
@@ -100,15 +100,17 @@
   </section>
   <!--Customer reviews-->
   <br><br><br>
-  <section id="review" style="background:black">
-  <h1 style="text-align:center; border:1px solid blue; border-radius:50px; margin-left:300px;margin-right:300px; background:blue; color:white;"> Customer reviews </h1>
-  
+  <section id="review" class=" bg-dark">
+  <h1 style="text-align:center; border:1px solid blue; border-radius:50px; margin-left:300px;margin-right:300px; background:blue; color:white;"> Customer reviews </h1> 
   <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 col-lg-12 col-sm-12">
             <div id="testimonial-slider" class="owl-carousel">
                 <div class="testimonial">
-                    <div class="pic">
+                  <div class="container">
+                   <div class="row">
+                   <div class="col-lg-4">
+                      <div class="pic">
                         <img src="./images/img-1.jfif">
                     </div>
                     <div class="testimonial-profile">
@@ -118,56 +120,53 @@
                     <p class="description" style="color:white">
                       I Loved working with them amazing customer serivce
                     </p>
-                </div>
-                <div class="testimonial">
-                    <div class="pic">
-                        <img src="images/img-2.jpg">
+                      </div>
+                      <div class="col-lg-4">
+                      <div class="pic">
+                        <img src="./images/img-3.jpg">
+                    </div>
+                    <div class="testimonial-profile">
+                        <h3 class="title" style="color:white">strike</h3>
+                        <span class="post" style="color:white">customer 2</span>
+                    </div>
+                    <p class="description" style="color:white">
+                      I Loved working with them amazing customer serivce
+                    </p>
+                      </div>
+                      <div class="col-lg-4">
+                      <div class="pic">
+                        <img src="./images/img-2.jpg" style="height:300px;">
                     </div>
                     <div class="testimonial-profile">
                         <h3 class="title" style="color:white">Adam</h3>
-                        <span class="post" style="color:white">Customer 2</span>
-                    </div>
-                    <p class="description" style="color:white">
-                        I Loved the phone and they have deliverd the item on time and with proper care
-                    </p>
-                </div>
-                <div class="testimonial">
-                    <div class="pic">
-                        <img src="images/img-3.jpg">
-                    </div>
-                    <div class="testimonial-profile">
-                        <h3 class="title" style="color:white">Steve Thomas</h3>
                         <span class="post" style="color:white">customer 3</span>
                     </div>
                     <p class="description" style="color:white">
-                       I had some issues with the phone and they gave me the money back without any issues! What an amazing company
+                      I Loved working with them amazing customer serivce
                     </p>
+                      </div>
+
+                    </div>
                 </div>
+                    
+                   
+                
             </div>
-        </div>
-    </div>
-</div>
+      
  
 
   
   
   </section>
-
-  <!-- FEATURED PHONE SECTION -->
+<!-- 
+  FEATURED PHONE SECTION -->
   <section>
     <div class="container">
       <div class="row">
-        <div class="col-lg-4">
-          <div class="mobile"></div>
-        </div>
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4"></div>
+        
+     
       </div>
-      <div class="row">
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4"></div>
-      </div>
+      
     </div>
   </section>
 
