@@ -136,7 +136,7 @@ if(isset($_REQUEST['order'])){
 <form action="" method="POST">
   <table>
     <tr>
-      <td><label for="name">Full Name: &nbsp</label><input name="name" style="width:300px" type="text" required></td>
+      <td><label for="name">Full Name: &nbsp</label><input name="name" style="width:300px" type="text" required autocomplete="off"></td>
     </tr>
     <tr>
       <td><label for="address">Address: &nbsp&nbsp&nbsp&nbsp</label><textarea style="resize:none" name="address" id="" cols="31" rows="2"></textarea></td>

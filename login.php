@@ -63,7 +63,7 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./images/jason-leung-TVWBH7UHQ7Y-unsplash.jpg" style="height: 900px" class="d-block w-100"
+          <img src="./images/Samsung & Iphone.jpg" style="height: 700px" class="d-block w-100"
             alt="..." />
         </div>
         <div class="carousel-item">
@@ -162,11 +162,38 @@
   FEATURED PHONE SECTION -->
   <section>
     <div class="container">
+    <h1 style="text-align:center; border:1px solid #8b0000; border-radius:50px; margin-left:300px;margin-right:300px; background:#8b0000; color:white;" >Best featured products</h1>
+    <br>
       <div class="row">
-        
-     
-      </div>
       
+        <div class="col-lg-6">
+        <div class='iphone'style='height:300px;'>
+        <h1>
+        Iphone
+        </h1>
+        
+       <a href="iphone.php"> <img src="./images/iphone7.jfif" style='height:200px;'alt=""></a>
+        <div class="description">
+       <span style="background:black;color:white;"> One of our best selling products. <br>Iphone 7 black and it has 128gb memory</span>
+        
+        </div>
+        </div>
+        </div>
+        <div class="col-lg-6">
+        <div class='iphone'style='height:300px;'>
+        <h1>
+        Samsung
+        </h1>
+        
+        <a href="samsung.php">   <img src="./images/Samsung-Galaxy-A01.jpg" style='height:200px;'alt=""> </a>
+        <div class="description">
+       <span style="background:#8b0000;color:white;"> One of our best selling Samsung products. <br>Samsunggalaxy A10 Red back and it has 128gb memory and 6gb ram</span>
+        
+        </div>
+        </div>
+        </div>
+     
+      </div>      
     </div>
   </section>
 

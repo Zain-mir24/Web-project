@@ -79,12 +79,12 @@
               
               echo  "<div class='col-lg-3 col-md-3 mobile'>";
                echo    " <div class='iphone' style='height:300px;'>";
-                 echo      " <h1>'".$row['Name']."'</h1>"; 
+                 echo      " <h1>".$row['Name']."</h1>"; 
               echo "<img src='images/".$row['images']."' style='height:150px;'a>";                
               echo  " <div class='description'>";
-              echo     " '".$row['Description']."' ";
+              echo     " ".$row['Description']."";
               echo  " </div>";
-              echo " <p>'".$row['price']."'</p>";
+              echo " <p>".$row['price']."</p>";
                       
                   
               echo  " <a href=product.php?ProductID=".$row['ProductID']."><button type='button' class='btn btn-warning'>Buy</button> </a>";
