@@ -77,7 +77,7 @@
             <?php 
             while($row=mysqli_fetch_array($result)){ 
               
-              echo  "<div class='col-lg-3 col-md-3 mobile'>";
+              echo  "<div class='col-lg-3 col-md-3 col-sm-3 mobile'>";
                echo    " <div class='iphone' style='height:300px;'>";
                  echo      " <h1>".$row['Name']."</h1>"; 
               echo "<img src='images/".$row['images']."' style='height:150px;'a>";                
