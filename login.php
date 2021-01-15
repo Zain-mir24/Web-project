@@ -98,6 +98,60 @@
       </div>
     </div>
   </section>
+  <!--Customer reviews-->
+  <br><br><br>
+  <section id="review">
+  <h1 style="text-align:center; border:1px solid blue; border-radius:50px; margin-left:300px;margin-right:300px; background:blue; color:white;"> Customer reviews </h1>
+  
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="testimonial-slider" class="owl-carousel">
+                <div class="testimonial">
+                    <div class="pic">
+                        <img src="images/img-1.jpg">
+                    </div>
+                    <div class="testimonial-profile">
+                        <h3 class="title">williamson</h3>
+                        <span class="post">Web Developer</span>
+                    </div>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros consequat auctor gravida. Fusce tristique lacus at urna sollicitudin pulvinar. Suspendisse hendrerit ultrices mauris.
+                    </p>
+                </div>
+                <div class="testimonial">
+                    <div class="pic">
+                        <img src="images/img-2.jpg">
+                    </div>
+                    <div class="testimonial-profile">
+                        <h3 class="title">Kristina</h3>
+                        <span class="post">Web Designer</span>
+                    </div>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros consequat auctor gravida. Fusce tristique lacus at urna sollicitudin pulvinar. Suspendisse hendrerit ultrices mauris.
+                    </p>
+                </div>
+                <div class="testimonial">
+                    <div class="pic">
+                        <img src="images/img-3.jpg">
+                    </div>
+                    <div class="testimonial-profile">
+                        <h3 class="title">Steve Thomas</h3>
+                        <span class="post">Web Developer</span>
+                    </div>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros consequat auctor gravida. Fusce tristique lacus at urna sollicitudin pulvinar. Suspendisse hendrerit ultrices mauris.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+
+  
+  
+  </section>
 
   <!-- FEATURED PHONE SECTION -->
   <section>
@@ -154,13 +208,48 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
-
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
     <script type="text/javascript" src="js/bootstrap/bootstrap-dropdown.js"></script>
     <script>
       $(document).ready(function () {
         $('.dropdown-toggle').dropdown()
       });
     </script>
+    <script>
+       JavaScript (Testimonial depend on jQuery and Owl carousel.)
+  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+  10
+  11
+  12
+  13
+  14
+  15
+ 
+   
+  $(document).ready(function(){
+      $("#testimonial-slider").owlCarousel({
+          items:2,
+          itemsDesktop:[1000,2],
+          itemsDesktopSmall:[979,2],
+          itemsTablet:[768,1],
+          pagination:false,
+          navigation:true,
+          navigationText:["",""],
+          autoPlay:true
+      });
+  });
+  
+    </script>
+    
 </body>
 
 </html>
