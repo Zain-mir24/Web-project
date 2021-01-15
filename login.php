@@ -100,7 +100,7 @@
   </section>
   <!--Customer reviews-->
   <br><br><br>
-  <section id="review">
+  <section id="review" style="background:black">
   <h1 style="text-align:center; border:1px solid blue; border-radius:50px; margin-left:300px;margin-right:300px; background:blue; color:white;"> Customer reviews </h1>
   
   <div class="container">
@@ -109,14 +109,14 @@
             <div id="testimonial-slider" class="owl-carousel">
                 <div class="testimonial">
                     <div class="pic">
-                        <img src="images/img-1.jpg">
+                        <img src="./images/img-1.jfif">
                     </div>
                     <div class="testimonial-profile">
-                        <h3 class="title">williamson</h3>
-                        <span class="post">Web Developer</span>
+                        <h3 class="title" style="color:white">williamson</h3>
+                        <span class="post" style="color:white">customer 1</span>
                     </div>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros consequat auctor gravida. Fusce tristique lacus at urna sollicitudin pulvinar. Suspendisse hendrerit ultrices mauris.
+                    <p class="description" style="color:white">
+                      I Loved working with them amazing customer serivce
                     </p>
                 </div>
                 <div class="testimonial">
@@ -124,11 +124,11 @@
                         <img src="images/img-2.jpg">
                     </div>
                     <div class="testimonial-profile">
-                        <h3 class="title">Kristina</h3>
-                        <span class="post">Web Designer</span>
+                        <h3 class="title" style="color:white">Adam</h3>
+                        <span class="post" style="color:white">Customer 2</span>
                     </div>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros consequat auctor gravida. Fusce tristique lacus at urna sollicitudin pulvinar. Suspendisse hendrerit ultrices mauris.
+                    <p class="description" style="color:white">
+                        I Loved the phone and they have deliverd the item on time and with proper care
                     </p>
                 </div>
                 <div class="testimonial">
@@ -136,11 +136,11 @@
                         <img src="images/img-3.jpg">
                     </div>
                     <div class="testimonial-profile">
-                        <h3 class="title">Steve Thomas</h3>
-                        <span class="post">Web Developer</span>
+                        <h3 class="title" style="color:white">Steve Thomas</h3>
+                        <span class="post" style="color:white">customer 3</span>
                     </div>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros consequat auctor gravida. Fusce tristique lacus at urna sollicitudin pulvinar. Suspendisse hendrerit ultrices mauris.
+                    <p class="description" style="color:white">
+                       I had some issues with the phone and they gave me the money back without any issues! What an amazing company
                     </p>
                 </div>
             </div>
